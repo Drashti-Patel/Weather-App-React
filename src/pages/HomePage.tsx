@@ -1,28 +1,25 @@
 import React from 'react';
 import WeeklyForecast from '../components/WeeklyForecast';
 import ThreeHourlyForecast from '../components/ThreeHourlyForecast';
-import AirConditions from '../components/AirConditions';
 import CurrentWeather from '../components/CurrentWeather';
-import NavBar from '../components/Navbar';
+import AirConditions from '../components/AirConditions';
+import BaseComponent from '../components/BaseComponent';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="h-full w-full grid grid-cols-6 gap-4">
-      <div className="bg-white shadow-md rounded-md col-span-1">
-        <NavBar />
-      </div>
+    <BaseComponent baseComponentStyles="h-full w-full">
+      <div className="h-full w-full grid grid-cols-5 gap-4">
+        <div className=" grid grid-rows-3 grid-flow-col gap-4 bg-white shadow-md rounded-md col-span-3">
+          <CurrentWeather />
+          <ThreeHourlyForecast />
+          <AirConditions />
+        </div>
 
-      {/* Second Column */}
-      <div className=" grid grid-rows-3 grid-flow-col gap-4 bg-white shadow-md rounded-md col-span-3">
-        <CurrentWeather />
-        <ThreeHourlyForecast />
-        <AirConditions />
+        <div className="bg-green-950 shadow-md rounded-md col-span-2">
+          <WeeklyForecast />
+        </div>
       </div>
-
-      <div className="bg-green-950 shadow-md rounded-md col-span-2">
-        <WeeklyForecast />
-      </div>
-    </div>
+    </BaseComponent>
   );
 };
 
