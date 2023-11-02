@@ -3,7 +3,6 @@ import React, { memo, useCallback, useEffect, useState } from 'react';
 import { commonHttp } from '../utils/commonHttp';
 import { WeatherIcon } from './WeatherIcon';
 
-// const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=-23.8041&lon=90.4152&exclude=hourly&units=metric&appid=b462849fee8752d40630390beee9e87d'
 const url =
   'https://api.openweathermap.org/data/2.5/forecast?q=jyväskylä&lat=-23.8041&lon=90.4152&units=metric&appid=b462849fee8752d40630390beee9e87d';
 
@@ -26,7 +25,7 @@ const ThreeHourlyForecast: React.FC = () => {
   return (
     <div className="w-full bg-[#202b3b] shadow-md rounded-md py-4 px-5 whitespace-nowrap">
       <div>
-        <span className=" capitalize text-[#9399A2] items-start flex">
+        <span className=" capitalize text_9399A2 items-start flex">
           Today's forecast
         </span>
 
@@ -36,16 +35,16 @@ const ThreeHourlyForecast: React.FC = () => {
               <div
                 className={`flex ${
                   i !== data.length - 1
-                    ? ' border-r border-r-[#9399A2] px-4 border-opacity-50 '
+                    ? ' border-r border_r_color_9399A2 px-4 border-opacity-50 '
                     : ' px-4 border-opacity-50 '
                 }`}
                 key={i}
               >
                 <div>
-                  <span className="text-[#9399A2]">
+                  <span className="text_9399A2">
                     {moment(el?.dt_txt).format('LT')}
                   </span>
-                  <div className="flex flex-col justify-center items-center mt-4 h-[70px] w-[70px]">
+                  <div className="flex flex-col justify-center items-center mt-4 wh70">
                     {el?.weather?.length > 0 && (
                       <WeatherIcon icon={el?.weather?.[0]?.icon} />
                     )}
