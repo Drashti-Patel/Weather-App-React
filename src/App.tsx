@@ -1,10 +1,21 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
+import Cities from './pages/Cities';
+import Map from './pages/Map';
+import Settings from './pages/Settings';
 
 function App() {
   return (
-    <div className="App bg-slate-900 h-screen w-screen p-8">
-      <HomePage />
+    <div className="App h-screen w-screen">
+      <Router>
+        <Routes>
+          <Route path="/cities" Component={Cities} />
+          <Route path="/maps" Component={Map} />
+          <Route path="/" Component={HomePage} />
+          <Route path="/settings" Component={Settings} />
+        </Routes>
+      </Router>
     </div>
   );
 }
