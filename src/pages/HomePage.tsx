@@ -1,9 +1,9 @@
 import React from 'react';
-import WeeklyForecast from '../components/WeeklyForecast';
-import ThreeHourlyForecast from '../components/ThreeHourlyForecast';
-import CurrentWeather from '../components/CurrentWeather';
-import AirConditions from '../components/airConditions/AirConditions';
 import BaseComponent from '../components/BaseComponent';
+import CurrentWeather from '../components/CurrentWeather';
+import ThreeHourlyForecast from '../components/ThreeHourlyForecast';
+import WeeklyForecast from '../components/WeeklyForecast';
+import AirConditions from '../components/airConditions/AirConditions';
 
 const HomePage: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
           <AirConditions />
         </div>
 
-        <div className="bg-green-950 shadow-md rounded-md col-span-2">
+        <div className="bg-[#202b3b] shadow-md rounded-md col-span-2 weeklyArea">
           <WeeklyForecast />
         </div>
       </div>
