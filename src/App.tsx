@@ -1,13 +1,13 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import HomePage from './pages/HomePage';
 import Cities from './pages/Cities';
+import HomePage from './pages/HomePage';
 import Map from './pages/Map';
 import Settings from './pages/Settings';
 
 function App() {
   return (
-    <div className="App h-screen w-screen">
+    <div className="App w-screen">
       <Router>
         <Routes>
           <Route path="/cities" Component={Cities} />

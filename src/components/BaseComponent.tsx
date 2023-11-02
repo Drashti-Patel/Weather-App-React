@@ -11,7 +11,7 @@ const BaseComponent: React.FC<BaseComponentProps> = ({
 }) => {
   return (
     <div
-      className={`bg-primary h-screen w-screen p-8 grid grid-cols-6 gap-4 ${baseComponentStyles}`}
+      className={`bg-primary w-screen p-8 grid grid-cols-6 gap-4 ${baseComponentStyles}`}
     >
       <div className="shadow-md rounded-md col-span-1">
         <NavBar />
