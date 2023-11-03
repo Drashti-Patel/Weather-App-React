@@ -19,11 +19,6 @@
   border-right-color: #9399a2;
 }
 
-.wh70 {
-  width: 70px;
-  height: 70px;
-}
-
 . @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
