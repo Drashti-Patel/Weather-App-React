@@ -35,13 +35,13 @@ const ThreeHourlyForecast: React.FC = () => {
               <div
                 className={`flex ${
                   i !== data.length - 1
-                    ? ' border-r border_r_color_9399A2 px-4 border-opacity-50 '
+                    ? ' border-r border_r_color_9399A2 px-3 border-opacity-50 '
                     : ' px-4 border-opacity-50 '
                 }`}
                 key={i}
               >
                 <div>
-                  <span className="text_9399A2">
+                  <span className="text_9399A2 text-sm">
                     {moment(el?.dt_txt).format('LT')}
                   </span>
                   <div className="flex flex-col justify-center items-center mt-4">
