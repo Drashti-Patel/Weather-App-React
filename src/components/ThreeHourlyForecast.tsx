@@ -23,13 +23,13 @@ const ThreeHourlyForecast: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#202b3b] shadow-md rounded-md py-4 px-5 whitespace-nowrap">
+    <div className="bg-[#202b3b] shadow-md rounded-md py-4 px-5 w-full shadow-md grid-cols-2">
       <div>
         <span className=" capitalize text_9399A2 items-start flex">
           Today's forecast
         </span>
 
-        <div className=" flex mt-4 relative">
+        <div className="flex mt-4">
           {data?.length > 0 &&
             data?.map((el: any, i: number) => (
               <div
@@ -44,7 +44,7 @@ const ThreeHourlyForecast: React.FC = () => {
                   <span className="text_9399A2">
                     {moment(el?.dt_txt).format('LT')}
                   </span>
-                  <div className="flex flex-col justify-center items-center mt-4 wh70">
+                  <div className="flex flex-col justify-center items-center mt-4">
                     {el?.weather?.length > 0 && (
                       <WeatherIcon icon={el?.weather?.[0]?.icon} />
                     )}
