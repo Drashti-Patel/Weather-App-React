@@ -7,7 +7,7 @@ module.exports = {
     extend: {
     colors: {
       'primary': '#172554',
-      'gray-card': '#6F7784',
+      'gray-card': '#202b3b',
       'nav-title': '#e3e6f0',
       current: 'currentColor',
     },

@@ -17,7 +17,7 @@ const AirConditionsItem: React.FC<AirConditionsItemProps> = ({
   height,
 }) => {
   return (
-    <div className="w-full flex items-start">
+    <div className="w-full flex flex-col md:flex-row items-start">
       <SvgComponent Svg={icon} width={width} height={height} />
       <div className="w-full flex flex-col items-start ml-4">
         <h4 className="text-nav-title font-semibold">{title}</h4>
