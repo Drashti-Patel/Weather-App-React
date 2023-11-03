@@ -7,7 +7,19 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.weeklyArea {
+  padding: 20px;
+}
+
+.text_9399A2 {
+  color: #9399a2;
+}
+
+.border_r_color_9399A2 {
+  border-right-color: #9399a2;
+}
+
+. @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
