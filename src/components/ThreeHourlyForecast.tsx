@@ -23,7 +23,7 @@ const ThreeHourlyForecast: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#202b3b] shadow-md rounded-md py-4 px-5 w-full shadow-md grid-cols-2">
+    <div className="w-full bg-[#202b3b] align-center shadow-md rounded-md">
       <div>
         <span className=" capitalize text_9399A2 items-start flex">
           Today's forecast

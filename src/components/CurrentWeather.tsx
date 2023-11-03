@@ -19,36 +19,36 @@ interface CurrentWeatherInfo {
 const CurrentWeather: React.FC = () => {
   const [data, setData] = useState<CurrentWeatherInfo>();
 
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          'https://api.openweathermap.org/data/2.5/weather?q=jyväskylä&units=imperial&appid=895284fb2d2c50a520ea537456963d9c'
-          );
-        setData(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-  
-    useEffect(() => {
-      fetchData();
-    }, []);
-  
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        'https://api.openweathermap.org/data/2.5/weather?q=jyväskylä&units=imperial&appid=895284fb2d2c50a520ea537456963d9c'
+      );
+      setData(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
-    <div className="w-full h-full bg-black shadow-md rounded-md flex flex-col justify-between items-start p-5">
-      <div className="flex flex-col items-start text-white">
-        <h1>{data? data.name : "Jyvaskyla"}</h1>
-        {data ? <h5>{"Weather: "+data.weather[0].description}</h5> : null}
+    <div className="w-full h-full bg-black shadow-md rounded-md flex flex-row justify-between p-5">
+      <div className="flex flex-col justify-between text-white mr-4">
+        <div className="mb-4">
+          <h1>Jyvaskyla</h1>
+          {data && <h5>{"Weather: " + data.weather[0].description}</h5>}
+        </div>
+        <div>
+          {data && <h1>{"Temperature: " + data.main.temp}°F</h1>}
+          {data && <h1>{"Feels like: " + data.main.feels_like}°F</h1>}
+        </div>
       </div>
 
-      <div className="flex flex-col items-end w-full">
-        <img src={sunImage} alt="temperature" width={150} height={150}/>
-      </div>
-
-      <div className="flex flex-col items-start text-white">
-        {data ? <h1>{"Temprature: "+data.main.temp}°F</h1> : null}
-        {data ? <h1>{"Feels like: "+data.main.feels_like}°F</h1> : null}
+      <div className="flex flex-col justify-center items-center">
+        <img src={sunImage} alt="temperature" width={150} height={150} />
       </div>
     </div>
   );
