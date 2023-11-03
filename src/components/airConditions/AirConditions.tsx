@@ -40,7 +40,7 @@ const AirConditions: React.FC = () => {
         temperature: main.temp,
         windSpeed: wind.speed,
         humidity: main.humidity,
-        rainChances: rain,
+        rainChances: rain['1h'],
       };
       setData(formattedResponse);
     }
