@@ -51,7 +51,7 @@ const AirConditions: React.FC = () => {
   return (
     <div className="w-full h-full flex flex-col bg-gray-card shadow-md rounded-md p-4 items-start">
       <h4 className="text-nav-title font-semibold"> AIR CONDITIONS</h4>
-      <div className="w-full h-max grid grid-cols-2 gap-8 mt-4">
+      <div className="w-full h-max grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
         <AirConditionsItem
           title={'Real Feel'}
           value={formatTemperatureValue(data?.temperature)}

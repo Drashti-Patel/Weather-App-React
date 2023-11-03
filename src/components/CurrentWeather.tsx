@@ -36,25 +36,19 @@ const CurrentWeather: React.FC = () => {
   
 
   return (
-    <div className="w-full bg-black shadow-md rounded-md grid grid-cols-2 ">
-      <div className="grid grid-rows-2 grid-flow-col bg-black-400 col-span-1">
-        <div className="bg-black">
-          <div className="flex flex-col items-start ml-3 mt-5 text-white">
-            <h1>{data? data.name : "Madrid"}</h1>
-
-            <div className="text-gray-400">
-            {data ? <h5>{data.weather ? "Weather: "+data.weather[0].description : "snow"}</h5> : null}
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full h-full ml-3 bg-black flex flex-col justify-center items-start text-white">
-        {data ? <h1>{data.main ? "Temprature: "+data.main.temp : "5"}°F</h1> : null}
-        {data ? <h1>{data.main ? "Feels like: "+data.main.feels_like : "7"}°F</h1> : null}
-        </div>
+    <div className="w-full h-full bg-black shadow-md rounded-md flex flex-col justify-between items-start p-5">
+      <div className="flex flex-col items-start text-white">
+        <h1>{data? data.name : "Jyvaskyla"}</h1>
+        {data ? <h5>{"Weather: "+data.weather[0].description}</h5> : null}
       </div>
-      <div className="flex flex-col justify-center items-center">
+
+      <div className="flex flex-col items-end w-full">
         <img src={sunImage} alt="temperature" width={150} height={150}/>
+      </div>
+
+      <div className="flex flex-col items-start text-white">
+        {data ? <h1>{"Temprature: "+data.main.temp}°F</h1> : null}
+        {data ? <h1>{"Feels like: "+data.main.feels_like}°F</h1> : null}
       </div>
     </div>
   );
