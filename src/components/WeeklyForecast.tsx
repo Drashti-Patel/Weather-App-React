@@ -24,33 +24,36 @@ const WeeklyForecast: React.FC = () => {
   }, []);
 
   return (
-<div className="h-full w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-      <h2 className="text-[#F2F2F2] text-lg font-semibold capitalize text-left mb-4">
-        7-day forecast
-      </h2>
-      <div className="flex flex-col space-y-4">
+//<div className="h-full w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+<div className="h-full w-full">
+<span className=" text-nav-title items-start flex mt-5 ml-5 font-semibold">
+7-DAY FORECAST
+        </span>
+        <div className=" ">
         {data?.length > 0 &&
           data?.map((el: any, i: number) => (
-            <div className="flex flex-col md:flex-row items-center justify-between p-4 rounded-lg" key={i}>
-              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
-                <span className="text-[#9399A2]">
-                  {moment.unix(el?.dt).format('dddd')}
-                </span>
-              </div>
-              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
-                <span className="text-[#9399A2] h-12 w-12">
-                  {el?.weather?.length > 0 && (
-                    <WeatherIcon icon={el?.weather?.[0]?.icon} />
-                  )}
-                </span>
-              </div>
-              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
-                <p className="text-[#9399A2]">{el?.weather?.[0]?.main}</p>
-              </div>
-              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
-                <p className="text-[#9399A2]">
-                  {el?.temp?.max}/{el?.temp?.min}
-                </p>
+            <div className=" mb-2" key={i}>
+              <div className="flex">
+                <div className="flex flex-col justify-center items-start mt-4 mb-4 ml-6 w-[30%]">
+                  <span className="text-[#9399A2]">
+                    {moment.unix(el?.dt).format('dddd')}
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center items-center mt-4 mb4 w-[20%]">
+                  <span className="text-[#9399A2] h-[50px] w-[50px]">
+                    {el?.weather?.length > 0 && (
+                      <WeatherIcon icon={el?.weather?.[0]?.icon} />
+                    )}
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center items-center mt-4 mb-4 w-[20%]">
+                  <p className="text-[#9399A2]">{el?.weather?.[0]?.main}</p>
+                </div>
+                <div className="flex flex-col justify-center items-center mt-4 mb-4 mr-2 w-[30%]">
+                  <p className="text-[#9399A2]">
+                    {el?.temp?.max}/{el?.temp?.min}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

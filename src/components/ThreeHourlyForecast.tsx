@@ -25,8 +25,8 @@ const ThreeHourlyForecast: React.FC = () => {
   return (
     <div className="w-full bg-[#202b3b] align-center shadow-md rounded-md">
       <div>
-        <span className=" capitalize text_9399A2 items-start flex">
-          Today's forecast
+        <span className=" text-nav-title items-start flex mt-3 ml-5 font-semibold">
+          TODAY'S FORECAST
         </span>
 
         <div className="flex mt-4">
@@ -35,8 +35,8 @@ const ThreeHourlyForecast: React.FC = () => {
               <div
                 className={`flex ${
                   i !== data.length - 1
-                    ? ' border-r border_r_color_9399A2 px-3 border-opacity-50 '
-                    : ' px-4 border-opacity-50 '
+                    ? ' border-r border_r_color_9399A2 px-2 border-opacity-50 '
+                    : ' px-2 border-opacity-50 '
                 }`}
                 key={i}
               >
@@ -49,7 +49,7 @@ const ThreeHourlyForecast: React.FC = () => {
                       <WeatherIcon icon={el?.weather?.[0]?.icon} />
                     )}
                   </div>
-                  <p className=" text-[#F2F2F2] mt-2">{el?.main?.temp}&deg;</p>
+                  <p className=" text-[#F2F2F2] p-2">{el?.main?.temp}&deg;</p>
                   <div className=" border-right border-white h-full top-0" />
                 </div>
               </div>

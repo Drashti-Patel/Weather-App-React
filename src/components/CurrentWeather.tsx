@@ -36,12 +36,12 @@ const CurrentWeather: React.FC = () => {
 
   return (
     <div className="w-full h-full bg-black shadow-md rounded-md flex flex-row justify-between p-5">
-      <div className="flex flex-col justify-between text-white mr-4">
-        <div className="mb-4">
+      <div className="flex flex-col justify-between text-white">
+      <div className="flex flex-col items-start justify-start p-5">
           <h1>Jyvaskyla</h1>
-          {data && <h5>{"Weather: " + data.weather[0].description}</h5>}
+          {data && <h1>{"Weather: " + data.weather[0].description}</h1>}
         </div>
-        <div>
+        <div className="flex flex-col items-start justify-end p-5">
           {data && <h1>{"Temperature: " + data.main.temp}°F</h1>}
           {data && <h1>{"Feels like: " + data.main.feels_like}°F</h1>}
         </div>
