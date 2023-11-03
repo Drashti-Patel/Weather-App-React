@@ -31,23 +31,23 @@ const WeeklyForecast: React.FC = () => {
       <div className="flex flex-col space-y-4">
         {data?.length > 0 &&
           data?.map((el: any, i: number) => (
-            <div className="flex flex-col md:flex-row items-center justify-between bg-gray-800 p-4 rounded-lg" key={i}>
-              <div className="flex flex-col items-center mb-2 md:mb-0">
+            <div className="flex flex-col md:flex-row items-center justify-between p-4 rounded-lg" key={i}>
+              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
                 <span className="text-[#9399A2]">
                   {moment.unix(el?.dt).format('dddd')}
                 </span>
               </div>
-              <div className="flex flex-col items-center mb-2 md:mb-0">
+              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
                 <span className="text-[#9399A2] h-12 w-12">
                   {el?.weather?.length > 0 && (
                     <WeatherIcon icon={el?.weather?.[0]?.icon} />
                   )}
                 </span>
               </div>
-              <div className="flex flex-col items-center mb-2 md:mb-0">
+              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
                 <p className="text-[#9399A2]">{el?.weather?.[0]?.main}</p>
               </div>
-              <div className="flex flex-col items-center mb-2 md:mb-0">
+              <div className="flex flex-col items-center mb-2 ml-2 md:mb-0">
                 <p className="text-[#9399A2]">
                   {el?.temp?.max}/{el?.temp?.min}
                 </p>

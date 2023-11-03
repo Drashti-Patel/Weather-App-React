@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
           <AirConditions />
         </div>
 
-        <div className="bg-green-950 shadow-md rounded-md md:col-span-2">
+        <div className="bg-[#202b3b] shadow-md rounded-md md:col-span-2">
           <WeeklyForecast />
         </div>
       </div>
