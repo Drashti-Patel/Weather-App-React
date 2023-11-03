@@ -41,7 +41,7 @@ const ThreeHourlyForecast: React.FC = () => {
                 key={i}
               >
                 <div>
-                  <span className="text_9399A2">
+                  <span className="text_9399A2 text-sm">
                     {moment(el?.dt_txt).format('LT')}
                   </span>
                   <div className="flex flex-col justify-center items-center mt-4">
