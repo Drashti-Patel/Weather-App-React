@@ -5,8 +5,6 @@ import { WeatherIcon } from './WeatherIcon';
 
 const url =
   'https://api.openweathermap.org/data/2.5/onecall?lat=-23.8041&lon=90.4152&exclude=current,alerts&units=metric&appid=895284fb2d2c50a520ea537456963d9c';
-// current,minutely,hourly
-// const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=-23.8041&lon=90.4152&exclude=hourly&units=metric&appid=b462849fee8752d40630390beee9e87d'
 
 const WeeklyForecast: React.FC = () => {
   const [data, setData] = useState<any>();
